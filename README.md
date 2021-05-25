@@ -49,7 +49,7 @@ This step is optional and are only required if you do not want to connect the Pi
 4. Use password `raspberry` once you are prompted 
 5. You should now see this or similar: `pi@raspberrypi:~ $`
 
-You have now successfully connected to the Raspberry Pi from another computer and ready to install Myriadcoin. Great job!
+You have now successfully connected to the Raspberry Pi from another computer and are ready to install Myriadcoin. Great job!
 
 ### Install and run Myriadcoin Core
 
