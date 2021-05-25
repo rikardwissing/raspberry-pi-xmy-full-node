@@ -11,7 +11,7 @@ Start off by getting the required components
 *  Power adapter for the Pi
 *  A cool case for it (optional)
 
-I've currently only tested this tutorial on a Raspberry Pi 4 with 4GB of RAM with a 16GB micro SD card, the complete setup cost me about $50. If a cheaper model of the Raspberry Pi could be used you could probably get the price down quite a bit. I am currently trying to find a Raspberry Pi Zero W to test on, which could make a $15 setup possible.
+I've currently only tested this tutorial on a Raspberry Pi 4 with 4GB of RAM with a 16GB micro SD card, the complete setup cost me about $50. If a cheaper model of the Raspberry Pi is used you could probably get the price down quite a bit. I am currently trying to find a Raspberry Pi Zero W to test it on, which could make a $15 setup possible.
 
 ### Prepare the SD card
 
