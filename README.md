@@ -15,7 +15,7 @@ I've currently only tested this tutorial on a Raspberry Pi 4 with 4GB of RAM wit
 
 ### Prepare the SD card
 
-Before we boot up the Raspberry we need to prepare the SD card.
+Before we boot up the Pi we need to prepare the SD card.
 
 1. Download Raspberry Pi Imager from https://www.raspberrypi.org/software/
 2. Mount the SD card to your computer
