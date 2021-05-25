@@ -41,7 +41,7 @@ Congratulations you now have your Raspberry Pi up and running and connected to t
 
 ### Connect to the Pi remotely
 
-This step is optional and are only required if you do not want to connect the Pi to a keyboard and monitor. These instructions are also made specifically if you have an ssh client available in your terminal. You can use other SSH clients and adapt the intructions to them. 
+This step is optional and is only required if you do not want to connect the Pi to a keyboard and monitor. These instructions are also made specifically if you have an ssh client available in your terminal. You can use other SSH clients and adapt the intructions to them. 
 
 1. Make sure you followed the instruction of how to enable ssh in the previous step when setting up the SD card
 2. Open up a terminal
