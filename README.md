@@ -82,4 +82,4 @@ You have now successfully connected to the Raspberry Pi from another computer an
 12. Activate the service so it starts everytime the Pi boots `sudo systemctl enable myriadcoin`
 13. If you want you can monitor the log by running `tail -f myriadcoind.log`
 
-If your router supports UPnP Myriadcoin Core should open the correct ports and make your node public. If you find that after it has fully synced that it's still not public, you might need to configure your router manually to forward TCP port 10880 to the Pi.
+If your router supports UPnP Myriadcoin Core should open the correct ports and make your node public. If you find that after it has fully synced that it's still not public, you might need to configure your router manually to forward TCP port 10888 to the Pi.
