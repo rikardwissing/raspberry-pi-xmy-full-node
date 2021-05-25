@@ -1,5 +1,7 @@
 # Install a Myriadcoin Full Node on a Headless Raspberry Pi
 
+![image](https://user-images.githubusercontent.com/22580571/119530875-b6ca2a80-bd83-11eb-8648-0b2c5251037e.png)
+
 This tutorial will help you setup and install a Myriadcoin full node on a Raspberry Pi from start to finish.
 
 ### Hardware
