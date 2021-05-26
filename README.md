@@ -75,6 +75,8 @@ You have now successfully connected to the Raspberry Pi from another computer an
    [Install]
    WantedBy=multi-user.target
    ```
+
+   If you run on a device with a low amount of RAM you might want to test to increase the swap file or experiment with the following params `-blocksonly -maxmempool=100 -dbcache=20 -maxorphantx=10 -maxsigcachesize=4 -maxconnections=4 -rpcthreads=1` 
 6. Save the file using Ctrl+O (make sure the file is saved as `myriadcoin.service`)
 7. Exit the text editor by using Ctrl+X
 8. Create a symlink of the service: `sudo ln -s /home/pi/myriadcoin.service /etc/systemd/system/myriadcoin.service`
