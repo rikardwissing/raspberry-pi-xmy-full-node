@@ -7,5 +7,5 @@ mkdir -p myriadcoin-data
 wget -qO- https://github.com/myriadteam/myriadcoin/releases/download/v0.18.1.0/myriadcoin-0.18.1.0-arm-linux-gnueabihf.tar.gz | tar xzfv - -C myriadcoin --strip-components=1
 
 ${DIR}/set-swapsize 2048
-${DIR}/install-service
+${DIR}/install-service 10888
 ${DIR}/install-bashtop

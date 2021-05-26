@@ -3,7 +3,7 @@ Description=Myriadcoin
 After=network.target
 
 [Service]
-ExecStart=/home/pi/myriadcoin/bin/myriadcoind -datadir=/home/pi/myriadcoin-data -debuglogfile=/home/pi/myriadcoind.log -rpcpassword=rpc -port=10888 -disablewallet -listen -discover -upnp
+ExecStart=/home/pi/myriadcoin/bin/myriadcoind -datadir=/home/pi/myriadcoin-data -debuglogfile=/home/pi/myriadcoind.log -rpcpassword=rpc -port=_PORT_ -disablewallet -listen -discover -upnp _ARGS_
 StandardOutput=inherit
 StandardError=inherit
 Restart=always

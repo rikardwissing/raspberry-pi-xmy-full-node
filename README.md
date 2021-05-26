@@ -62,7 +62,7 @@ You have now successfully connected to the Raspberry Pi from another computer an
 1. Run `wget -qO- https://github.com/rikardwissing/raspberry-pi-xmy-full-node/archive/refs/heads/main.tar.gz | tar xzfv -`
 2. Then run `raspberry-pi-xmy-full-node-main/auto-install`
 
-If you are installing on a low memory device, use `raspberry-pi-xmy-full-node-main/install-service -low-ram` after installation.
+If you are installing on a low memory device, you might need to use `raspberry-pi-xmy-full-node-main/install-service 10888 "-blocksonly -maxmempool=100 -dbcache=20 -maxorphantx=10 -maxsigcachesize=4 -maxconnections=4 -rpcthreads=1"` after installation.
 
 #### Manual install
 

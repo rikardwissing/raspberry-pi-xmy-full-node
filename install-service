@@ -1,6 +1,11 @@
 #!/bin/bash
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd)"
 
+echo "Setting port to $1"
+cp ${DIR}/conf/myriadcoin.service ${DIR}/conf/modified-myriadcoin.service
+sed -i "s\/_PORT_\/$1\/g" ${DIR}/conf/modified-myriadcoin.service
+sed -i "s\/_ARGS_\/$2\/g" ${DIR}/conf/modified-myriadcoin.service
+
 sudo systemctl daemon-reload
 
 echo "Removing old service if it exists..."
@@ -9,6 +14,6 @@ sudo systemctl disable myriadcoin
 rm /etc/systemd/system/myriadcoin.service
 
 echo "Adding service..."
-sudo ln -s ${DIR}/conf/myriadcoin${1}.service /etc/systemd/system/myriadcoin.service
+sudo ln -s ${DIR}/conf/modified-myriadcoin.service /etc/systemd/system/myriadcoin.service
 sudo systemctl start myriadcoin
 sudo systemctl enable myriadcoin
