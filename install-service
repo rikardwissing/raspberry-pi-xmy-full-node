@@ -1,6 +1,8 @@
 #!/bin/bash
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd)"
 
+sudo systemctl daemon-reload
+
 echo "Removing old service if it exists..."
 sudo systemctl stop myriadcoin
 sudo systemctl disable myriadcoin
