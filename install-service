@@ -1,6 +1,8 @@
 #!/bin/bash
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd)"
 
+echo ${DIR}
+
 echo "Setting port to $1"
 cp ${DIR}/conf/myriadcoin.service ${DIR}/conf/modified-myriadcoin.service
 sed -i "s/_PORT_/$1/g" ${DIR}/conf/modified-myriadcoin.service
