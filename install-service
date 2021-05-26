@@ -13,9 +13,8 @@ sed -i "s/_ARGS_/$2/g" ${DIR}/conf/modified/myriadcoin.service
 echo "Removing old service if it exists..."
 sudo systemctl stop myriadcoin
 sudo systemctl disable myriadcoin
+
 sudo systemctl daemon-reload
-sudo systemctl stop myriadcoin
-sudo systemctl disable myriadcoin
 
 echo "Adding service..."
 sudo systemctl enable ${DIR}/conf/modified/myriadcoin.service
