@@ -1,0 +1,5 @@
+#!/bin/bash
+echo "Setting swap size to ${1}MB..."
+sudo dphys-swapfile swapoff
+sudo echo "CONF_SWAPSIZE=${1}" > /etc/dphys-swapfile
+sudo dphys-swapfile swapon

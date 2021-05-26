@@ -1,0 +1,4 @@
+#!/bin/bash
+echo "Installing bashtop..."
+wget -qO- https://github.com/aristocratos/bashtop/archive/refs/heads/master.tar.gz | tar xzfv -
+bashtop-master/bashtop

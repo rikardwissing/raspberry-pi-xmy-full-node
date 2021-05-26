@@ -1,11 +1,11 @@
 #!/bin/bash
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd)"
 
+echo "Installing Myriadcoin Core..."
 mkdir -p myriadcoin
+mkdir -p myriadcoin-data
 wget -qO- https://github.com/myriadteam/myriadcoin/releases/download/v0.18.1.0/myriadcoin-0.18.1.0-arm-linux-gnueabihf.tar.gz | tar xzfv - -C myriadcoin --strip-components=1
-mkdir myriadcoin-data
-sudo ln -s $DIR/conf/myriadcoin.service /etc/systemd/system/myriadcoin.service
-sudo systemctl start myriadcoin
-sudo systemctl enable myriadcoin
-wget -qO- https://github.com/aristocratos/bashtop/archive/refs/heads/master.tar.gz | tar xzfv -
-bashtop-master/bashtop
+
+${DIR}/set-swapsize 2048
+${DIR}/install-service
+${DIR}/install-bashtop
