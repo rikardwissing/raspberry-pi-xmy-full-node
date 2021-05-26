@@ -59,12 +59,12 @@ You have now successfully connected to the Raspberry Pi from another computer an
 
 #### Automatic install
 
-1. Run `wget -qO- https://github.com/rikardwissing/raspberry-pi-xmy-full-node/archive/refs/heads/main.zip | busybox unzip -`
+1. Run `wget -qO- https://github.com/rikardwissing/raspberry-pi-xmy-full-node/archive/refs/heads/main.tar.gz | tar xzfv -`
 2. Then run `raspberry-pi-xmy-full-node-main/auto-install`
 
 #### Manual install
 
-1. Download and extract Myriadcoin Core: `mkdir -p myriadcoin && wget -qO- https://github.com/myriadteam/myriadcoin/releases/download/v0.18.1.0/myriadcoin-0.18.1.0-arm-linux-gnueabihf.tar.gz | tar xzf - -C myriadcoin --strip-components=1`
+1. Download and extract Myriadcoin Core: `mkdir -p myriadcoin && wget -qO- https://github.com/myriadteam/myriadcoin/releases/download/v0.18.1.0/myriadcoin-0.18.1.0-arm-linux-gnueabihf.tar.gz | tar xzfv - -C myriadcoin --strip-components=1`
 2. Create a data directory for the Myriadcoin blockchain: `mkdir myriadcoin-data`
 3. Open a text editor to create a service `nano myriadcoin.service` and copy the following into it
 
