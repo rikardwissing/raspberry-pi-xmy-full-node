@@ -7,13 +7,13 @@ mkdir -p myriadcoin-data
 wget -qO- https://github.com/myriadteam/myriadcoin/archive/refs/tags/v0.18.1.0.tar.gz | tar xzfv - -C myriadcoin --strip-components=1
 
 sudo apt-get update
-sudo apt-get install -y build-essential libtool autotools-dev automake pkg-config libssl-dev libevent-dev bsdmainutils python3 libboost-system-dev libboost-filesystem-dev libboost-chrono-dev libboost-program-options-dev libboost-test-dev libboost-thread-dev libdb++-dev
+sudo apt-get install -y build-essential libtool autotools-dev automake pkg-config libssl-dev libevent-dev bsdmainutils python3 libboost-system-dev libboost-filesystem-dev libboost-chrono-dev libboost-program-options-dev libboost-test-dev libboost-thread-dev libdb++-dev libminiupnpc-dev libnatpmp-dev
 
 cd ${DIR}/myriadcoin/depends
 make HOST=arm-linux-gnueabihf NO_QT=1
 cd ..
 ./autogen.sh
-CONFIG_SITE=$PWD/depends/arm-linux-gnueabihf/share/config.site ./configure --enable-glibc-back-compat --enable-reduce-exports LDFLAGS=-static-libstdc++
+CONFIG_SITE=$PWD/depends/arm-linux-gnueabihf/share/config.site ./configure --enable-glibc-back-compat --enable-reduce-exports --disable-wallet --with-boost-libdir=/usr/lib/arm-linux-gnueabihf --with-miniupnpc --enable-upnp-default --with-natpmp --enable-natpmp-default LDFLAGS=-static-libstdc++
 make
 cd ${DIR}/..
 
