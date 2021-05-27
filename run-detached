@@ -1,0 +1,8 @@
+#!/bin/bash
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd)"
+
+sudo apt-get install -y screen
+screen -d -m ${DIR}/${1}
+
+# attach to screen with screen -r
+# detach when inside screen "Ctrl+A d"
