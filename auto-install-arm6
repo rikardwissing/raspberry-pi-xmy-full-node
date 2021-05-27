@@ -6,12 +6,16 @@ mkdir -p myriadcoin
 mkdir -p myriadcoin-data
 wget -qO- https://github.com/myriadteam/myriadcoin/archive/refs/tags/v0.18.1.0.tar.gz | tar xzfv - -C myriadcoin --strip-components=1
 
-cd myriadcoin/depends
+sudo apt-get update
+sudo apt-get install -y build-essential libtool autotools-dev automake pkg-config libssl-dev libevent-dev bsdmainutils python3 libboost-system-dev libboost-filesystem-dev libboost-chrono-dev libboost-program-options-dev libboost-test-dev libboost-thread-dev libdb++-dev
+
+cd ${DIR}/myriadcoin/depends
 make HOST=arm-linux-gnueabihf NO_QT=1
 cd ..
 ./autogen.sh
 CONFIG_SITE=$PWD/depends/arm-linux-gnueabihf/share/config.site ./configure --enable-glibc-back-compat --enable-reduce-exports LDFLAGS=-static-libstdc++
 make
+cd ${DIR}/..
 
 ${DIR}/set-swapsize 2048
 ${DIR}/install-service 10888
