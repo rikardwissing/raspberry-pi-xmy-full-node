@@ -7,7 +7,7 @@ ExecStart=_HOMEDIR_/myriadcoin/bin/myriadcoind -datadir=_HOMEDIR_/myriadcoin-dat
 StandardOutput=inherit
 StandardError=inherit
 Restart=always
-User=pi
+User=_USER_
 
 [Install]
 WantedBy=multi-user.target
