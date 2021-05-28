@@ -1,0 +1,4 @@
+#!/bin/bash
+echo "Installing bpytop..."
+wget -qO- https://github.com/aristocratos/bpytop/archive/refs/heads/master.tar.gz | tar xzfv -
+python3 bpytop-master/bpytop.py

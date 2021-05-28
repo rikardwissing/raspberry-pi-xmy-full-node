@@ -14,11 +14,11 @@ sed -i 's,_HOMEDIR_,'"$HOMEDIR"',g' ${DIR}/conf/modified/myriadcoin.service
 sed -i 's,_USER_,'"$USER"',g' ${DIR}/conf/modified/myriadcoin.service
 
 echo "Removing old service if it exists..."
-sudo systemctl stop myriadcoin
-sudo systemctl disable myriadcoin
+systemctl stop myriadcoin
+systemctl disable myriadcoin
 
-sudo systemctl daemon-reload
+systemctl daemon-reload
 
 echo "Adding service..."
-sudo systemctl enable ${DIR}/conf/modified/myriadcoin.service
-sudo systemctl start myriadcoin
+systemctl enable ${DIR}/conf/modified/myriadcoin.service
+systemctl start myriadcoin
