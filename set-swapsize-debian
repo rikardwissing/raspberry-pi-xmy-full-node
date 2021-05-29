@@ -1,0 +1,9 @@
+#!/bin/bash
+echo "Setting swap size to 2GB..."
+sudo fallocate -l 2G /swapfile
+sudo chmod 600 /swapfile
+sudo mkswap /swapfile
+sudo swapon /swapfile
+
+echo "Add the following to /etc/fstab"
+echo "/swapfile swap swap defaults 0 0"
