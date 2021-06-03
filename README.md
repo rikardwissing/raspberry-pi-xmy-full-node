@@ -36,6 +36,8 @@ Before we boot up the Pi we need to prepare the SD card.
        psk="NETWORK-PASSWORD"
    }
    ```
+   
+   Remember that certain flavors of Pi, like Pi 1 and Pi Zero W, only supports 2.4Ghz wifi networks
 
 7. Save the file and unmount the SD card
 8. Insert the SD card into the Raspberry Pi and boot it up
