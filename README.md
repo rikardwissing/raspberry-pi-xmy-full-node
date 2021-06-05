@@ -124,3 +124,9 @@ Bashtop is a bit to CPU intensive for these devices so the script installs htop 
 11. If you want you can monitor the log by running `tail -f myriadcoind.log`
 
 If your router supports UPnP Myriadcoin Core should open the correct ports and make your node public. If you find that after it has fully synced that it's still not public, you might need to configure your router manually to forward TCP port 10888 to the Pi.
+
+### Extra
+
+#### Sense Hat
+
+Run `sudo raspberry-pi-xmy-full-node-main/install-sense-hat` to display Myriadcoin logo on led matrix
