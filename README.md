@@ -28,7 +28,7 @@ When writing this tutorial I tested it on a Raspberry Pi 4 with 4GB of RAM with 
 
 | Device                 | RAM   | CPU        | Estimated cost | Note                                                                    |
 | ---------------------- | ----- | ---------- | -------------: | ------------------------------------------------------------------------|
-| Raspberry Pi 3 Model B | 1GB   | 4x1.2GHz   | N/A            | No issues, needs to use some Swap                                       |
+| Raspberry Pi 3 Model B | 1GB   | 4x1.2GHz   | N/A            | Needs to use some Swap but works great                                       |
 | Raspberry Pi 1 Model B | 512MB | 700MHz     | N/A            | Follow ARM v6 instructions below. Takes a couple of days to compile and sync |
 
 ### Prepare the SD card
