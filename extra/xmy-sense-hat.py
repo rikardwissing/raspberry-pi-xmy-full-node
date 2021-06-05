@@ -5,7 +5,8 @@ from time import sleep
 import subprocess
 
 sense = SenseHat()
-sense.load_image("/home/pi/raspberry-pi-xmy-full-node-main/extra/logo_refresh_8x8.png")
+sense.load_image(
+    "/home/pi/raspberry-pi-xmy-full-node-main/extra/logo_refresh_8x8.png")
 sense.low_light = True
 
 
@@ -23,7 +24,7 @@ prev_block_count = 0
 while True:
     try:
         block_count = subprocess.check_output(
-            ['myriadcoin/bin/myriadcoin-cli', '-rpcpassword=rpc', 'getblockcount'])
+            ['/home/pi/myriadcoin/bin/myriadcoin-cli', '-rpcpassword=rpc', 'getblockcount'])
         print(block_count)
 
         if block_count != prev_block_count:
