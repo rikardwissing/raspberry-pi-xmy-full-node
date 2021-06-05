@@ -78,7 +78,7 @@ You have now successfully connected to the Raspberry Pi from another computer an
 #### Automatic install
 
 1. Run `wget -qO- https://github.com/rikardwissing/raspberry-pi-xmy-full-node/archive/refs/heads/main.tar.gz | tar xzfv -`
-2. Then run `sudo raspberry-pi-xmy-full-node-main/auto-install`
+2. Then run `sudo raspberry-pi-xmy-full-node-main/auto-install` (see special instructions if using ARM v6 device)
 3. You can monitor the log by running `tail -f myriadcoind.log`
 4. To monitor processes and network usage you can use bashtop by running `bashtop-master/bashtop`
 
