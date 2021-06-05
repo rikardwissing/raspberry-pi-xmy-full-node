@@ -13,8 +13,8 @@ sense.low_light = True
 def rotate_image():
     i = 0
     while i < 4*16:
-        sense.set_rotation(i*90 % 360)
         i += 1
+        sense.set_rotation(i*90 % 360)
         sleep(0.1)
 
 
