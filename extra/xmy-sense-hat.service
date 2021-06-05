@@ -3,7 +3,7 @@ Description=SenseHat
 After=network.target
 
 [Service]
-ExecStart=/bin/sh -c 'python /home/pi/raspberry-pi-xmy-full-node-main/extra/xmy-sense-hat.py 2>&1 > /home/pi/xmy-sense-hat.log'
+ExecStart=/bin/bash -ce "python /home/pi/raspberry-pi-xmy-full-node-main/extra/xmy-sense-hat.py >> /home/pi/xmy-sense-hat.log 2>&1"
 StandardOutput=inherit
 StandardError=inherit
 Restart=always
