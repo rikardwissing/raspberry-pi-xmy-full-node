@@ -8,12 +8,28 @@ This tutorial will help you setup and install a Myriadcoin full node on a Raspbe
 
 Start off by getting the required components
 
-- Raspberry Pi with at least 2GB of RAM (might work with less RAM)
+- A Raspberry Pi with at least 512MB of RAM (2GB is recommended though)
 - 16GB or larger SD card that fits your choice of Raspberry Pi (My current PI uses around 10GB so a 16GB SD card works for now, but it might be too small in the future as the blockchain grows)
 - Power adapter for the Pi
 - A cool case for it (optional)
 
-I've currently only tested this tutorial on a Raspberry Pi 4 with 4GB of RAM with a 16GB micro SD card, the complete setup cost me about $50. If a cheaper model of the Raspberry Pi is used you could probably get the price down quite a bit. I am currently trying to find a Raspberry Pi Zero W to test it on, which could make a $15 setup possible.
+When writing this tutorial I tested it on a Raspberry Pi 4 with 4GB of RAM with a 16GB micro SD card, that complete setup cost me about $50. I have now tested it on more and cheaper models with great success. See the table below for all the devices that has currently been tested.
+
+#### Tested devices
+
+##### Current models
+
+| Device                 | RAM   | CPU        | Estimated cost | Note                                                                    |
+| ---------------------- | ----- | ---------- | -------------: | ------------------------------------------------------------------------|
+| Raspberry Pi 4 Model B | 4GB   | 4x1.5GHz   | $50            | No issues, works like a charm. Recommended!                             |
+| Raspberry Pi Zero      | 512MB | 700MHz     | $15            | Follow ARM v6 instructions below. Takes a couple of days to compile and sync |
+
+##### Older models
+
+| Device                 | RAM   | CPU        | Estimated cost | Note                                                                    |
+| ---------------------- | ----- | ---------- | -------------: | ------------------------------------------------------------------------|
+| Raspberry Pi 3 Model B | 1GB   | 4x1.2GHz   | N/A            | No issues, needs to use some Swap                                       |
+| Raspberry Pi 1 Model B | 512MB | 700MHz     | N/A            | Follow ARM v6 instructions below. Takes a couple of days to compile and sync |
 
 ### Prepare the SD card
 
@@ -63,12 +79,18 @@ You have now successfully connected to the Raspberry Pi from another computer an
 
 1. Run `wget -qO- https://github.com/rikardwissing/raspberry-pi-xmy-full-node/archive/refs/heads/main.tar.gz | tar xzfv -`
 2. Then run `sudo raspberry-pi-xmy-full-node-main/auto-install`
+3. You can monitor the log by running `tail -f myriadcoind.log`
+4. To monitor processes and network usage you can use bashtop by running `bashtop-master/bashtop`
 
-If you have an ARM6 device (like the Pi Zero or Pi 1) you need to run `sudo raspberry-pi-xmy-full-node-main/run-detached auto-install-arm6` (it will compile myriadcoin from source). It will run in a detached screen, so to see progress you need to run `sudo screen -r` (detach from screen with Ctrl+A d)
+##### Special instructions for ARM v6 CPU (Raspberry Pi Zero or Pi 1)
 
-If you are installing on a low memory device, you might need to use `sudo raspberry-pi-xmy-full-node-main/install-service 10888 "-blocksonly -maxmempool=100 -dbcache=20 -maxorphantx=10 -maxsigcachesize=4 -rpcthreads=1"` after installation.
+If you have an ARM v6 device (like the Pi Zero or Pi 1) you need to run `sudo raspberry-pi-xmy-full-node-main/run-detached auto-install-arm6` (it will compile myriadcoin from source). It will run in a detached screen, so to see progress you need to run `sudo screen -r` (detach from screen with Ctrl+A d)
+
+Bashtop is a bit to CPU intensive for these devices so the script installs htop instead. Simply run `htop` to monitor processes.
 
 #### Manual install
+
+(Manual install does not work on Raspberry Pi Zero or 1, see automatic installation for those devices)
 
 1. Download and extract Myriadcoin Core: `mkdir -p myriadcoin && wget -qO- https://github.com/myriadteam/myriadcoin/releases/download/v0.18.1.0/myriadcoin-0.18.1.0-arm-linux-gnueabihf.tar.gz | tar xzfv - -C myriadcoin --strip-components=1`
 2. Create a data directory for the Myriadcoin blockchain: `mkdir myriadcoin-data`
@@ -90,7 +112,7 @@ If you are installing on a low memory device, you might need to use `sudo raspbe
    WantedBy=multi-user.target
    ```
 
-   If you run on a device with a low amount of RAM you might want to test to increase the swap file or experiment with the following params `-blocksonly -maxmempool=100 -dbcache=20 -maxorphantx=10 -maxsigcachesize=4 -maxconnections=4 -rpcthreads=1`
+   If you run on a device with a low amount of RAM you might want to test to increase the swap file or experiment with the following params `-blocksonly -maxmempool=100 -dbcache=20 -maxorphantx=10 -maxsigcachesize=4 -rpcthreads=1`
 
 4. Save the file using Ctrl+O (make sure the file is saved as `myriadcoin.service`)
 5. Exit the text editor by using Ctrl+X
