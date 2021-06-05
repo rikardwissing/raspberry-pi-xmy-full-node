@@ -1,0 +1,13 @@
+[Unit]
+Description=SenseHat
+After=network.target
+
+[Service]
+ExecStart=python /home/pi/raspberry-pi-xmy-full-node/extra/sense_hat.py
+StandardOutput=inherit
+StandardError=inherit
+Restart=always
+User=pi
+
+[Install]
+WantedBy=multi-user.target
