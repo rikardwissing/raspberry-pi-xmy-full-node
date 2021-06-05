@@ -5,7 +5,7 @@ from time import sleep
 import subprocess
 
 sense = SenseHat()
-sense.load_image("raspberry-pi-xmy-full-node-main/extra/logo_refresh_8x8.png")
+sense.load_image("logo_refresh_8x8.png")
 sense.low_light = True
 
 

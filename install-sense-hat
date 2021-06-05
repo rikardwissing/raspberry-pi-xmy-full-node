@@ -1,12 +1,13 @@
 #!/bin/bash
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd)"
 
-echo "Removing old service if it exists..."
-systemctl stop myriadcoin
-systemctl disable myriadcoin
+apt-get update
+apt-get install sense-hat
 
-systemctl daemon-reload
+echo "Removing old service if it exists..."
+systemctl stop xmy-sense-hat
+systemctl disable xmy-sense-hat
 
 echo "Adding service..."
-systemctl enable ${DIR}/extra/sense_hat.service
-systemctl start sense_hat
+systemctl enable ${DIR}/extra/xmy-sense-hat.service
+systemctl start xmy-sense-hat
