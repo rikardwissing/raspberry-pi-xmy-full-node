@@ -5,7 +5,7 @@ After=network.target
 [Service]
 ExecStart=python /home/pi/raspberry-pi-xmy-full-node-main/extra/xmy-sense-hat.py
 StandardOutput=file:/home/pi/xmy-sense-hat.log
-StandardError=inherit
+StandardError=file:/home/pi/xmy-sense-hat.error.log
 Restart=always
 User=pi
 
