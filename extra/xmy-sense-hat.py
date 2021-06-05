@@ -24,7 +24,7 @@ while True:
     try:
         block_count = subprocess.check_output(
             ['myriadcoin/bin/myriadcoin-cli', '-rpcpassword=rpc', 'getblockcount'])
-        print("Current block count: " + block_count)
+        print(block_count)
 
         if block_count != prev_block_count:
             prev_block_count = block_count
