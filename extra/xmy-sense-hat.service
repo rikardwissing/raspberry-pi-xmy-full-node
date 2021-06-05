@@ -3,8 +3,8 @@ Description=SenseHat
 After=network.target
 
 [Service]
-ExecStart=python /home/pi/raspberry-pi-xmy-full-node-main/extra/xmy-sense-hat.py > /home/pi/xmy-sense-hat.log
-StandardOutput=inherit
+ExecStart=python /home/pi/raspberry-pi-xmy-full-node-main/extra/xmy-sense-hat.py
+StandardOutput=file:/home/pi/xmy-sense-hat.log
 StandardError=inherit
 Restart=always
 User=pi
