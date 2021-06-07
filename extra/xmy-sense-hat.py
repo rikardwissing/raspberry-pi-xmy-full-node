@@ -79,7 +79,6 @@ while True:
 
             rotate_image(rotation)
             algo_flash(block_info['pow_algo_id'])
-            sleep(3)
 
             sense.low_light = True
 
