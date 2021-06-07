@@ -11,7 +11,8 @@ Start off by getting the required components
 - A Raspberry Pi with at least 512MB of RAM (2GB is recommended though)
 - 16GB or larger SD card that fits your choice of Raspberry Pi (My current PI uses around 10GB so a 16GB SD card works for now, but it might be too small in the future as the blockchain grows)
 - Power adapter for the Pi
-- A cool case for it (optional)
+- A cool case for it, check out the 3d printable ones below (optional)
+- A Sense HAT for a sweet light display (optional)
 
 When writing this tutorial I tested it on a Raspberry Pi 4 with 4GB of RAM with a 16GB micro SD card, that complete setup cost me about $50. I have now tested it on more and cheaper models with great success. See the table below for all the devices that has currently been tested.
 
