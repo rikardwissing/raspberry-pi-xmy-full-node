@@ -127,6 +127,19 @@ If your router supports UPnP Myriadcoin Core should open the correct ports and m
 
 ### Extra
 
-#### Sense Hat
+#### Sense HAT
 
-Run `sudo raspberry-pi-xmy-full-node-main/install-sense-hat` to display Myriadcoin logo on led matrix
+If you have a Sense HAT I have prepared a script that displays the Myriadcoin logo and flashes in different colors when a new block have been found.
+
+1. Get a Sense HAT (https://www.raspberrypi.org/products/sense-hat/)
+2. Run `sudo raspberry-pi-xmy-full-node-main/install-sense-hat`
+
+| Algo      | Color          |
+| --------- | -------------- |
+| SHA256D   | ![#71DD96](https://via.placeholder.com/15/71DD96/000000?text=+) `#71DD96 (113, 221, 150)` |
+| Scrypt    | ![#FD951E](https://via.placeholder.com/15/FD951E/000000?text=+) `#FD951E (253, 149, 30)`  |
+| Groestl   | ![#FDEF41](https://via.placeholder.com/15/FDEF41/000000?text=+) `#FDEF41 (253, 239, 65)`  |
+| ~~Skein~~ | ![#F6BEBE](https://via.placeholder.com/15/F6BEBE/000000?text=+) `#F6BEBE (246, 108, 190)` |
+| ~~Qubit~~ | ![#83E9ED](https://via.placeholder.com/15/83E9ED/000000?text=+) `#83E9ED (131, 233, 237)` |
+| Yescrypt  | ![#86B7F0](https://via.placeholder.com/15/86B7F0/000000?text=+) `#86B7F0 (134, 183, 240)` |
+| Argon2d   | ![#AF48DA](https://via.placeholder.com/15/AF48DA/000000?text=+) `#AF48DA (175, 72, 218)`  |
