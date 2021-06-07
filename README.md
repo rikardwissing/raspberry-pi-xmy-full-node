@@ -127,6 +127,12 @@ If your router supports UPnP Myriadcoin Core should open the correct ports and m
 
 ### Extra
 
+#### 3D prints
+
+In the `extra/3d_prints` folder you'll find some sweet Myriadcoin branded Raspberry Pi cases.
+
+They are modified versions of [Malalo's](https://www.thingiverse.com/thing:3723561) and [Make's](https://www.thingiverse.com/thing:1173084 designs.
+
 #### Sense HAT
 
 If you have a Sense HAT I have prepared a script that displays the Myriadcoin logo and flashes in different colors when a new block have been found.
