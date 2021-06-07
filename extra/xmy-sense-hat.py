@@ -62,9 +62,9 @@ while True:
     try:
         block_count = subprocess.check_output(
             ['/home/pi/myriadcoin/bin/myriadcoin-cli', '-rpcpassword=rpc', 'getblockcount']).strip()
-        print(block_count)
 
         if block_count != prev_block_count:
+            print(block_count)
             prev_block_count = block_count
 
             block_hash = subprocess.check_output(
