@@ -39,7 +39,7 @@ Before we boot up the Pi we need to prepare the SD card.
 1. Download Raspberry Pi Imager from https://www.raspberrypi.org/software/
 2. Mount the SD card to your computer
 3. Start Raspberry Pi Imager and install Raspberry Pi OS Lite on your SD card
-4. Open up the SD card in your computers explorer (you might need to remount the the SD card to make it show up)
+4. Open up the SD card in your computers explorer (you might need to remount the SD card to make it show up)
 5. If you plan to connect to the Pi remotely you need to create an empty file called `ssh` on the SD card
 6. If you want the Pi to connect to your wifi you should create a file called `wpa_supplicant.conf` on the SD card. Then paste the following into it (replacing `NETWORK-NAME` and `NETWORK-PASSWORD` with your wifi network name and password):
 
@@ -54,11 +54,11 @@ Before we boot up the Pi we need to prepare the SD card.
    }
    ```
    
-   Remember that certain flavors of Pi, like Pi 1 and Pi Zero W, only supports 2.4Ghz wifi networks
+   Remember that certain flavors of the Pi, like the Pi 1 and the Pi Zero W, only supports 2.4Ghz wifi networks
 
 7. Save the file and unmount the SD card
 8. Insert the SD card into the Raspberry Pi and boot it up
-9. After the Pi has booted you should be able to ping it using ´ping raspberrypi`
+9. After the Pi has booted you should be able to ping it using `ping raspberrypi`
 
 Congratulations you now have your Raspberry Pi up and running and connected to the internet.
 
@@ -66,7 +66,7 @@ Congratulations you now have your Raspberry Pi up and running and connected to t
 
 This step is optional and is only required if you do not want to connect the Pi to a keyboard and monitor. These instructions are also made specifically if you have an ssh client available in your terminal. You can use other SSH clients and adapt the intructions to them.
 
-1. Make sure you followed the instruction of how to enable ssh in the previous step when setting up the SD card
+1. Make sure you followed the instructions of how to enable ssh in the previous step when setting up the SD card
 2. Open up a terminal
 3. Connect to the Pi using `ssh pi@raspberrypi` (pi is the username hence the pi@)
 4. Use password `raspberry` once you are prompted
