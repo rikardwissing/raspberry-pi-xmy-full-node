@@ -134,6 +134,12 @@ In the `extra/3d_prints` folder you'll find some sweet Myriadcoin branded Raspbe
 
 They are modified versions of [Malalo's](https://www.thingiverse.com/thing:3723561) and [Make's](https://www.thingiverse.com/thing:1173084 designs.
 
+| Device                 | Image | Note  |
+| ---------------------- | ----- | ----- |
+| Raspberry Pi 3         | <img src="https://user-images.githubusercontent.com/22580571/121431769-1fb3c400-c97a-11eb-8bb4-ba6e32a02318.jpg" width="150"> | The sweet light display is provided by the Sense HAT script. See more on that below. |
+| Raspberry Pi Zero      | <img src="https://user-images.githubusercontent.com/22580571/121431750-19bde300-c97a-11eb-941b-49fa8cdacdfd.jpg" width="150"> | Isn't this just the cutest thing ever? |
+
+
 #### Sense HAT
 
 If you have a Sense HAT I have prepared a script that displays the Myriadcoin logo and flashes in different colors when a new block have been found.
