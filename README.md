@@ -79,7 +79,7 @@ You have now successfully connected to the Raspberry Pi from another computer an
 #### Automatic install
 
 1. Run `wget -qO- https://github.com/rikardwissing/raspberry-pi-xmy-full-node/archive/refs/heads/main.tar.gz | tar xzfv -`
-2. Then run `sudo raspberry-pi-xmy-full-node-main/auto-install` (see special instructions if using ARM v6 device)
+2. Then run `sudo raspberry-pi-xmy-full-node-main/auto-install` (see special instructions if using an ARM v6 device)
 3. You can monitor the log by running `tail -f myriadcoind.log`
 4. To monitor processes and network usage you can use bashtop by running `bashtop-master/bashtop`
 
@@ -132,7 +132,7 @@ If your router supports UPnP Myriadcoin Core should open the correct ports and m
 
 In the `extra/3d_prints` folder you'll find some sweet Myriadcoin branded Raspberry Pi cases.
 
-They are modified versions of [Malalo's](https://www.thingiverse.com/thing:3723561) and [Make's](https://www.thingiverse.com/thing:1173084 designs.
+They are modified versions of [Malalo's](https://www.thingiverse.com/thing:3723561) and [Make's](https://www.thingiverse.com/thing:1173084) designs.
 
 | Device                 | Image | Note  |
 | ---------------------- | ----- | ----- |
@@ -142,7 +142,7 @@ They are modified versions of [Malalo's](https://www.thingiverse.com/thing:37235
 
 #### Sense HAT
 
-If you have a Sense HAT I have prepared a script that displays the Myriadcoin logo and flashes in different colors when a new block have been found.
+If you have a Sense HAT I have prepared a script that displays the Myriadcoin logo and flashes in different colors when a new block has been found.
 
 1. Get a Sense HAT (https://www.raspberrypi.org/products/sense-hat/)
 2. Run `sudo raspberry-pi-xmy-full-node-main/install-sense-hat`
