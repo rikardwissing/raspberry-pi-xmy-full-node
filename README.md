@@ -23,7 +23,7 @@ When writing this tutorial I tested it on a Raspberry Pi 4 with 4GB of RAM with 
 | Device                 | RAM   | CPU        | Estimated cost | Note                                                                    |
 | ---------------------- | ----- | ---------- | -------------: | ------------------------------------------------------------------------|
 | Raspberry Pi 4 Model B | 4GB   | 4x1.5GHz   | $50            | No issues, works like a charm. Recommended!                             |
-| Raspberry Pi Zero      | 512MB | 700MHz     | $15            | Follow ARM v6 instructions below. Takes a couple of days to compile and sync |
+| Raspberry Pi Zero W    | 512MB | 700MHz     | $15            | Follow ARM v6 instructions below. Takes a couple of days to compile and sync |
 
 ##### Older models
 
