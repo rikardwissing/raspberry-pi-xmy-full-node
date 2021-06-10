@@ -136,7 +136,7 @@ They are modified versions of [Malalo's](https://www.thingiverse.com/thing:37235
 
 | Device                 | Image | Note  |
 | ---------------------- | ----- | ----- |
-| Raspberry Pi 3         | <img src="https://user-images.githubusercontent.com/22580571/121431769-1fb3c400-c97a-11eb-8bb4-ba6e32a02318.jpg" width="150"> | The sweet light display is provided by the Sense HAT script. See more on that below. |
+| Raspberry Pi 3         | <img src="https://user-images.githubusercontent.com/22580571/121495503-f3c82b00-c9d9-11eb-8b5b-25fdfccab756.jpg" width="150"> | The sweet light display is provided by the Sense HAT script. See more on that below. |
 | Raspberry Pi Zero      | <img src="https://user-images.githubusercontent.com/22580571/121494123-c0d16780-c9d8-11eb-8297-277815b6c40c.jpg" width="150"> | Isn't this just the cutest thing ever? |
 
 
