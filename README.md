@@ -142,7 +142,7 @@ They are modified versions of [Malalo's](https://www.thingiverse.com/thing:37235
 
 #### Sense HAT
 
-If you have a Sense HAT I have prepared a script that displays the Myriadcoin logo and flashes in different colors when a new block has been found.
+If you have a Sense HAT I have prepared a script that displays the Myriadcoin logo and flashes in different colors when a new block has been found. [Check it out in action here](https://imgur.com/5Wl1JRo)
 
 1. Get a Sense HAT (https://www.raspberrypi.org/products/sense-hat/)
 2. Run `sudo raspberry-pi-xmy-full-node-main/install-sense-hat`
